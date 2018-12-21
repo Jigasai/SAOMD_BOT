@@ -1,0 +1,76 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "name": "A Rest Day for Swordsmen",
+      "texte": "Les combats sont multijoueurs.\nIl y a Int(niv30),Expert(niv50),EX(niv80),Master(niv90),Master+1(niv100).",
+      "rewards": "Story : 12 (chaque storys donne 5 <:md:525008781277528065> donc au total 60 <:md:525008781277528065>\n<:md:525008781277528065> x5\n<:SwordFragment:525008823442866187> x5\n<:BronzeMd:525008646304694283> x20\n<:SilverMd:525008691586662400> x10\n<:GoldMd:525008859543371780> x3\n<:GoldenUpgrade:525010777678282757> x3\n<:RainbowEssence:525011036596862976> x1\nFemale Primary Trainee Uniform R4 <:Water:524694016655097872> (!equip 1)\nTrainee Necklace R4 <:Dark:524693945788268574> (!equip 2)\n",
+      "supp": "Une arme récupérable contre 10 <:SwordFragment:525008823442866187> pour voir l'arme : !equip 3",
+      "url": "https://saomd-fanadata.fr/images/data_fiche/quete/Multi%20Event/A%20Rest%20Day%20for%20Swordsmen%202018-12-05/bann1.png"
+    },
+    {
+      "id": 2,
+      "name": "New Shadowy Castle in the Night",
+      "texte": "Les combats sont solos.\nIl y a plusieurs étages : 1-20,21-40,41-60,61-80 et 81-100.",
+      "rewards": "A chaque arrivée au palier indiqué, tu reçois les récompenses :\nPalier  20 -> <:MemoryFragment:525008750713765901> x2\nPalier  40 -> <:MemoryFragment:525008750713765901> x4\nPalier  50 -> <:RainbowEssence:525011036596862976> x1\nPalier  60 -> <:MemoryFragment:525008750713765901> x4\n              Titre avec un skill\nPalier  70 -> <:RainbowEssence:525011036596862976> x1\nPalier  80 -> <:MemoryFragment:525008750713765901> x5\nPalier  90 -> <:RainbowEssence:525011036596862976> x1\nPalier 100 -> <:MemoryFragment:525008750713765901> x5\n              Titre avec un skill\n",
+      "supp": "Récupération de Chaussettes de Noël :\n\nSurprise Encore R4 (!equip 6) -> 1000 socks - 1 Disponible\nMiracle Bringer +1 R4 (!equip 7) -> 600 socks - 1 Disponible\nSurprise Encore R4 (!equip 8) -> 600 socks - 1 Disponible\nExchange Sword R3 -> 250 socks - 4 Disponible",
+      "url": "https://saomd-fanadata.fr/images/data_fiche/quete/Floor%20Clearing%20Event/NEW%20Shadowy%20Castle%20in%20the%20Night%202%202018-12-10/bann1.png"
+    },
+    {
+      "id": 3,
+      "name": "Christmas Special Event Equipment Exchange",
+      "texte": "Les combats sont multijoueurs.\nIl y a Int(niv30),Expert(niv50),EX(niv80),Master(niv90),Master+1(niv100).",
+      "rewards": "Récupération d'EP à chaque fin de combats.\n\nChristmas Party Dress R3 (!equip 4) -> 500 EP - 12 achetables\nChristmas Side Cap R3 (!equip 5) -> 500 EP - 12 achetables\nGolden Upgrade Crystal -> 1500 EP - 2 achetables\nBell Gold Medal -> 1250 EP - 2 achetables",
+      "supp": "Récupération de Chaussettes de Noël :\n\nSurprise Encore R4 (!equip 6) -> 1000 socks - 1 Disponible\nMiracle Bringer +1 R4 (!equip 7) -> 600 socks - 1 Disponible\nFeathered Christmas Coat +1 R4 (!equip 8) -> 600 socks - 1 Disponible\nExchange Sword R3 -> 250 socks - 4 Disponible",
+      "url": "https://saomd-fanadata.fr/images/data_fiche/quete/Equipment%20Exchange%20Event/Christmas%20Special%20Equipment%20Exchange%202018-12-12/bann1.png"
+    },
+    {
+      "id": 4,
+      "name": "Battlefield's Christmas Miracle Part 2",
+      "texte": "Les combats sont multijoueurs.\nIl y a Int(niv30),Expert(niv50),EX(niv80),Master(niv90),Master+1(niv100).",
+      "rewards": "Story : 12 (chaque storys donne 5 <:md:525008781277528065> donc au total 60 <:md:525008781277528065>\n<:md:525008781277528065> x35\n<:BronzeMd:525008646304694283> x20\n<:SilverMd:525008691586662400> x10\n<:GoldMd:525008859543371780> x1\n<:Almighty:525008589283262464> x10\n",
+      "supp": "Pour 10 <:GoldMd:525008859543371780>, vous pouvez obtenir :\nFukaziroh [Parachute Reindeer] <:Light:524693995553685525> <:Rifle:524983817656860672> (!perso5_6e 5)\nLLENN [Santa Surprise] <:Light:524693995553685525> <:Rifle:524983817656860672> (!perso5_6e 6)\n",
+      "url": "https://saomd-fanadata.fr/images/data_fiche/quete/Ranking%20-%20Timed%20Battle/Battlefield's%20Christmas%20Miracle%20Part%202%202018-12-14/bann1.png"
+    },
+    {
+      "id": 5,
+      "name": "Mission Challenge Campaign",
+      "texte": "Les combats sont solos.\nIl y a Int(niv30),Expert(niv50),EX(niv80) et Master(niv100).",
+      "rewards": "Les rewards seront présents le 24/12 et 25/12.",
+      "supp": "Je n'ai pas de nouvelles tant qu'on est pas le 24/12.",
+      "url": "https://saomd-fanadata.fr/images/data_fiche/quete/Floor%20Clearing%20Event/NEW%20Shadowy%20Castle%20in%20the%20Night%202%202018-12-10/bann1.png"
+    }
+  ],
+  "events_list": [
+    {
+      "id": 1,
+      "name": "A Rest Day for Swordsmen",
+      "date": "02/01/2019",
+      "fini": "Non"
+    },
+    {
+      "id": 2,
+      "name": "New Shadowy Castle in the Night",
+      "date": "09/01/2019",
+      "fini": "Non"
+    },
+    {
+      "id": 3,
+      "name": "Christmas Special Event Equipment Exchange",
+      "date": "27/12/2018",
+      "fini": "Non"
+    },
+    {
+      "id": 4,
+      "name": "Battlefield's Christmas Miracle Part 2",
+      "date": "23/12/2018",
+      "fini": "Non"
+    },
+    {
+      "id": 5,
+      "name": "Mission Challenge Campaign",
+      "date": "25/12/2018",
+      "fini": "Non"
+    }
+  ]
+}

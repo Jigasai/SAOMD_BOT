@@ -1,0 +1,20 @@
+{
+  "name": "saomd_bot",
+  "version": "1.0.0",
+  "description": "C'est un bot pour répondre aux questions sur le jeu saomd",
+  "main": "main.js",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "express": "^4.16.4",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "saomdbot"
+  ],
+  "author": "Jigasai",
+  "license": "ISC"
+}
