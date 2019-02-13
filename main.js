@@ -9,12 +9,6 @@ const db = low(adapter);
 
 db.defaults({ persos: []})
     .write();
-	
-//HEROKU
-app.set('port',(process.env.PORT || 5000));    
-app.listen(app.get('port'), function(){
-    console.log("Bot en fonctionnement sur le port"+ app.get('port'));
-});
 
 var bot = new Discord.Client();
 var prefix = ("!");
