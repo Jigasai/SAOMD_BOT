@@ -102,7 +102,7 @@ bot.on("message", message => {
 			texte = texte + "2eme : "+getDeuxieme("nom")+" "+getDeuxieme("pts")+" pts";
 			texte = texte + "3eme : "+getTroisieme("nom")+" "+getTroisieme("pts")+" pts";
 			texte = texte + "4eme : "+getQuatrieme("nom")+" "+getQuatrieme("pts")+" pts";
-			list_embed.addField("Les résultats :,texte);
+			list_embed.addField("Les résultats :",texte);
             message.channel.send(list_embed);
         break;
         
