@@ -7,6 +7,8 @@ const app = express();
 const adapter = new FileSync("data.json");
 const db = low(adapter);
 
+var pool = require ('./clientpool.js');
+
 db.defaults({ persos: []})
     .write();
 
@@ -43,6 +45,37 @@ bot.on("message", message => {
             help_embed.addField("Commandes du bot !", cmd );
             message.channel.send(help_embed);
         break;
+		
+		case "init":
+			pool.connect((err,client,done)=>{
+				client.query('CREATE TABLE Match(\
+					id INT primary key,\
+					vie INT,\
+					un INT,\
+					deux INT,\
+					trois INT,\
+					quatre INT,\
+					carte VARCHAR(100))',(err,result)=>{
+						done(err);
+				});
+			});
+			pool.connect((err,client,done)=>{
+				client.query('CREATE TABLE HautFaits(\
+					nom VARCHAR(255),\
+					icone VARCHAR(255),\
+					resume VARCHAR(255),\
+					pts INT)',(err,result)=>{
+						done(err);
+				});
+			});
+			pool.connect((err,client,done)=>{
+				client.query('CREATE TABLE hf(\
+					id INT,\
+					proprio INT)',(err,result)=>{
+						done(err);
+				});
+			});
+		break;
 
         case "match":
             var name = message.content.substr(7);
@@ -53,19 +86,26 @@ bot.on("message", message => {
 			var third  = test[3];
 			var fourth = test[4];
 			var map  = name.substr(17);
-			
-            var idMatch = parseInt(db.get("persos").map("id").value().length +1);
 
             message.reply("Ajout des données du match faites !");
-
-            db.get("Match")
-            .push({ id: idMatch, vie: life, un: first, deux: second, trois: third, quatre: fourth, carte: map})
-			.write()
 			
-			if(vie==5){
-				db.get("HF")
-				.push({ id: 1, proprio:getPlayer(first)})
-				.write()
+			pool.connect((err,client,done)=>{
+				client.query('INSERT INTO Match(vie,un,deux,trois,quatre,carte)\
+					VALUES ($1,$2,$3,$4,$5,$6,$7)',
+					[life,first,second,firth,fourth,map]
+					,(err,result)=>{
+						done(err);
+				});
+			});
+			
+			if(vie==5
+			pool.connect((err,client,done)=>{
+				client.query('INSERT INTO hf VALUES(1,$1)',
+					[getPlayer(first)]
+					,(err,result)=>{
+						done(err);
+				});
+			});
 			}
         break;
 		
@@ -75,23 +115,29 @@ bot.on("message", message => {
             var matchnumber = db.get('Match').map('id').value().length;
             var list_embed = new Discord.RichEmbed()
             .setColor("#D9F200")
+			var vie;
+			var pre;
+			var deu;
+			var tro;
+			var qua;
 			
-            var i = 1;
-            while (i < matchnumber){
-                var id = db.get("Match["+i+"].id").toString().value();
-                var vie = db.get("Match["+i+"].vie").toString().value();
-                var pre = db.get("Match["+i+"].un").toString().value();
+			db.one('SELECT vie,un,deux,trois,quatre FROM Match')
+				.then(match => {
+				vie = match.vie;
+				pre = match.un;
+				deu = match.deux;
+				tro = match.trois;
+				qua = match.quatre;
+				
 				addPts(1,pre,vie);
-                var deu = db.get("Match["+i+"].deux").toString().value();
-				addPts(2,deu,0);
-                var tro = db.get("Match["+i+"].trois").toString().value();
-				addPts(3,tro,0);
-                var qua = db.get("Match["+i+"].quatre").toString().value();
-				addPts(4,qua,0);
-                var map = db.get("Match["+i+"].carte").toString().value();
-                
-                i = parseInt(i+1);
-            }
+                addPts(2,deu,0);
+                addPts(3,tro,0);
+                addPts(4,qua,0);
+			})
+			.catch(error => {
+				console.log(error); // print the error;
+			});
+               
 			var texte = "1er : "+getPremier("nom")+" "+getPremier("pts")+" pts";
 			texte = texte + "2eme : "+getDeuxieme("nom")+" "+getDeuxieme("pts")+" pts";
 			texte = texte + "3eme : "+getTroisieme("nom")+" "+getTroisieme("pts")+" pts";
@@ -319,6 +365,3 @@ function getQuatrieme(data){
 	if(data=="pts")return pts;
 	if(data=="nom")return nom;
 }
-
-
-
