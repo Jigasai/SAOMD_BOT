@@ -70,7 +70,7 @@ bot.on("message", message => {
 			
 			if(vie==5){
 				db.get("HF")
-				.push({ id: 1, proprio:})
+				.push({ id: 1, proprio:getPlayer(first)})
 				.write()
 			}
         break;
