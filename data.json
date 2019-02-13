@@ -1,0 +1,39 @@
+{
+  "Match": [
+    {
+      "id": 	"0",
+      "vie": 	"0",
+      "un": 	"0",
+      "deux": 	"0",
+      "trois": 	"0",
+      "quatre": "0",
+	  "carte": 	"PASDEMAP"
+	}
+  ],
+  "Haut-faits": [
+    {
+      "nom": 	"Je suis l'Alpha et l'Omega",
+	  "icone":  "",
+	  "resume": "Gagner une partie sans mourir.",
+      "pts": 	"25"
+	},
+	{
+      "nom": 	"Ca fait mal ?",
+	  "icone":  "",
+	  "resume": "Gagner une partie avec la relique de la mort.",
+      "pts": 	"10"
+	},
+	{
+      "nom": 	"Un homme à terre !",
+	  "icone":  "",
+	  "resume": "Gagner une partie avec l'adversaire qui se suicide.",
+      "pts": 	"5"
+	}
+  ],
+  "HF": [
+    {
+      "id": 	  "0",
+	  "proprio":  "PERSONNE"
+	}
+  ]
+}
