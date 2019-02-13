@@ -46,7 +46,7 @@ bot.on("message", message => {
 
         case "match":
             var name = message.content.substr(7);
-			var test = name.substring(test.length).split(" ");
+			var test = name.split(" ");
 			var life  = test[0];
 			var first  = test[1];
 			var second = test[2];
